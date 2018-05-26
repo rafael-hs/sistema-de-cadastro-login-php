@@ -13,7 +13,7 @@ include("includes/header.php");
     <div id="cadastrar"><a href="./index.php" title="Faça login!"> Login&raquo;</a></div>
 	    <div id="login" class="form bradius" style="150px">
 		<!--Mensagem de tratamento de exceção -->
-		<div class="message bradius"><?php echo $msg;?></div>
+		<div class="message"><?php echo $msg;?></div>
 		<!--Logo -->
 		<div class="logo"><a href="<?php echo $home;?>" title="<?php echo $title;?>"><img class="logoimg" src="css/imagens/logo.png" alt="<?php echo $title;?>" title="<?php echo $title;?>"
             width="150" height="100"/></a></div>
