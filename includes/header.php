@@ -25,12 +25,12 @@ if($startaction==1)
    {
        $nome=$_POST["nome"];
        $endereco=$_POST["endereco"];
-       $usuario=$_POST["usuario"];
+       $email=$_POST["email"];
        $senha=$_POST["senha"];
         //verificando se existe algum campo vazio
-       if(empty($nome) || empty($endereco) || empty($usuario) || empty($senha))
+       if(empty($nome) || empty($endereco) || empty($email) || empty($senha))
        {
-           $msg="Preencha todos os campos";
+           $msg="Preencha todos os campos!";
        }else
        {  
           //validação de email
@@ -45,7 +45,8 @@ if($startaction==1)
             else
             {
             //executar a classe de cadastro
-                $connectar="";
+                $connectar = new Cadastro;
+                $connectar = $conectar->cadastrar($nome,$endereco,$email,$senha);
             }
           }
           //email invalido

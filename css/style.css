@@ -28,6 +28,8 @@ body{
 	height:90px;
 	margin:3 auto;
 	padding:2px;
+	position: relative;
+	top:5px;
 }
 #cadastrar{
 	border-bottom-left-radius: 8px;
@@ -44,6 +46,16 @@ body{
 	position: absolute;
 	right:0;
 	top:0;
+}
+.massage{
+	width:100%;
+	padding:3px;
+	color:#141313;
+	background-color:red;
+	margin:0 auto;
+	text-align:center;
+	right: 50px;
+
 }
 #cadastrar a{
 	padding-top:5px;
