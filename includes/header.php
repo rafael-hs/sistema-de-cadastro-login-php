@@ -1,7 +1,7 @@
 <?php 
 //Globais
 $home="http://localhost/sistemaphp/";
-$title="sistemaPHP - ADM";
+$title="sistemaPHP";
 $startaction="";
 $msg="";
 if(isset($_GET["acao"]))
@@ -46,7 +46,9 @@ if($startaction==1)
             {
             //executar a classe de cadastro
                 $connectar = new Cadastro;
-                $connectar = $conectar->cadastrar($nome,$endereco,$email,$senha);
+                echo "<div class=\"flash\">";
+                $connectar = $connectar->cadastrar($nome,$endereco,$email,$senha);
+                echo "</div>";
             }
           }
           //email invalido
@@ -58,7 +60,12 @@ if($startaction==1)
 
    }
 }
-
+//variaveis de estilo
+if(empty($msg)){
+    $display="display:none;";
+}else{
+    $display="display:block;";
+}
 
 //testando conexão com o bando fazendo select retornando o numero de registros.
 //$query = mysql_query("SELECT * FROM usuarios");
