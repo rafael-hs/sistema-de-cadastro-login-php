@@ -12,6 +12,7 @@ if(isset($_GET["acao"]))
 //include das classes
 include("/classes/DB.class.php");
 include("/classes/Cadastro.class.php");
+include("/classes/Login.class.php");
 //oculta o erro de versão do php
 error_reporting (E_ALL & ~ E_NOTICE & ~ E_DEPRECATED);
 //Conexão com o banco de dados
@@ -58,6 +59,14 @@ if($startaction==1)
           }
        }
 
+   }
+}
+
+//metodo de login
+if($startaction==1)
+{
+   if($acao=="logar")
+   {
    }
 }
 //variaveis de estilo

@@ -14,9 +14,13 @@ a{
 	width:300px;
 	margin:0 auto;
 	position:relative;
-	top:250x;
+	top:250px;
 	border:1px solid #f1f1f1;
 	padding:10px;
+	background: #dbdbdb;
+}
+#login label{
+	display: block;
 }
 .logo{
 	display:block;
@@ -24,7 +28,7 @@ a{
     margin-right: auto;
 	width:200px;
 	height:90px;
-	margin:3 auto;
+	margin:1 auto;
 	padding:2px;
 	position: relative;
 	top:5px;
@@ -49,8 +53,8 @@ a{
 	-webkit-border-bottom-right-radius: 15px;
 	-moz-border-radius-bottomleft: 8px;
 	-moz-border-radius-bottomright: 15px;
-	height:40px;
-	width:300px;
+	height:60px;
+	width:200px;
 	background: #979696;
 	text-align: center;
 	line-height: 40px;
@@ -103,7 +107,7 @@ form label{
 	margin-top:10px;
 	cursor:pointer;
 	font-family: 'IM Fell French Canon SC', serif;
-	color:#666;
+	color:rgb(143, 143, 143);
 }
 .sb:hover{
 	background:rgb(5, 12, 17);
