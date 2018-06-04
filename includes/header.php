@@ -1,4 +1,7 @@
-<?php 
+<?php
+//starts
+ob_start();
+session_start();
 //Globais
 $home="http://localhost/sistemaphp/";
 $title="sistemaPHP";
@@ -33,7 +36,7 @@ if($startaction==1)
        {
            $msg="Preencha todos os campos!";
        }else
-       {  
+       {
           //validação de email
           if(filter_var($email,FILTER_VALIDATE_EMAIL))
           {
@@ -84,6 +87,8 @@ if($startaction==1)
             {
                 //Executa a busca pelo usuário
                 $login=new Login;
+                $emaild=$_SESSION['email'];
+                $senhad=$_SESSION=['senha'];
                 echo "<div class=\"flash\">";
                 $login=$login->logar($email,$senha);
                 echo "</div>";
