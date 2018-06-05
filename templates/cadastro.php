@@ -10,7 +10,7 @@ include("templates/header.php");
 		<div class="logo"><a href="<?php echo $home;?>" title="<?php echo $title;?>"><img class="logoimg" src="css/imagens/logo.png" alt="<?php echo $title;?>" title="<?php echo $title;?>"
             width="150" height="100"/></a></div>
 		<div class="acomodar">
-		<form action="?acao=cadastrar" method="post">
+		<form action="cadastro.php?acao=cadastrar" method="post">
             <label for="nome">Nome:</label><input type="text" class="txt bradius" id="nome" name="nome"/>
             <label for="endereco">Endereço:</label><input type="text" class="txt bradius" id="endereco" name="endereco"/>
 			<label for="email">email:</label><input type="text" class="txt bradius" id="email" name="email" value=""/>

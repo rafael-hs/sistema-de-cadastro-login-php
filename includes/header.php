@@ -96,14 +96,51 @@ if($startaction==1)
         }
    }
 }
-
+//Método de logout
+if($startaction==1)
+{
+   if($acao=="logout")
+   {
+   setcookie("logado","");
+   unset($_SESSION['email'],$_SESSION['senha'],$_SESSION['nivel']);
+   }
+}
 //Metodo de checar usuário
 if(isset($_SESSION['email']) && isset($_SESSION['senha']))
 {
     $logado=1;
     $nivel=$_SESSION['nivel'];
 }
-
+//Método de aprovação
+if($startaction==1)
+{
+   if($acao=="aprovar")
+   {
+       if($nivel==2)
+       {
+            if(isset($_GET['id']))
+            {
+                $id=$_GET['id'];
+                $query=mysql_query("UPDATE usuarios SET status='1' WHERE id='$id'");
+            }
+       }
+    }
+}
+//Método de bloqueio
+if($startaction==1)
+{
+   if($acao=="bloquear")
+   {
+       if($nivel==2)
+       {
+            if(isset($_GET['id']))
+            {
+                $id=$_GET['id'];
+                $query=mysql_query("UPDATE usuarios SET status='0' WHERE id='$id'");
+            }
+       }
+    }
+}
 //variaveis de estilo
 if(empty($msg)){
     $display="display:none;";
