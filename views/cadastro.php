@@ -1,6 +1,6 @@
 <?php
 $page="Cadastro";
-include("templates/header.php");
+include("views/header.php");
 ?>	<!--div de cadastro -->
     <div id="cadastrar"><a href="./index.php" title="Faça login!"> Login&raquo;</a></div>
 	    <div id="login" class="form bradius" style="150px">

@@ -1,6 +1,6 @@
 <?php
 $page="Painel Administrativo";
-include("templates/header.php");
+include("views/header.php");
 ?>
   <div id="cadastrar"><a href="index.php?acao=logout" title="Fazer logout">Logout &raquo;</a></div>
 	<div id="login" class="form bradius">
