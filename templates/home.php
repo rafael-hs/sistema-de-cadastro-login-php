@@ -10,10 +10,11 @@ include("templates/header.php");
 		width="150" height="100"/></a>
 		</div>
 		<div class="acomodar">
-		<?php 
+		<?php
 			if($nivel==2)
 			{
 			?>
+			<!--cria a tabela que vai mostrar os usuários a serem aprovados ou bloqueados -->
 			<table width="100%" border="0">
 				<tr>
 					<th>Nome</th>
