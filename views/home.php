@@ -1,19 +1,18 @@
-<?php
-$page="Painel Administrativo";
-include("views/header.php");
-?>
   <div id="cadastrar"><a href="index.php?acao=logout" title="Fazer logout">Logout &raquo;</a></div>
-	<div id="login" class="form bradius">
-		<div class="message" style="<?php echo $display?>"><?php echo $msg;?></div>
-		<div class="logo"><a href="<?php echo $home;?>" title="<?php echo $title;?>"><img class="logoimg"
-		src="css/imagens/logo.png"alt="<?php echo $title;?>" title="<?php echo $title;?>"
-		width="150" height="100"/></a>
-		</div>
-		<div class="acomodar">
+	
 		<?php
 			if($nivel==2)
 			{
+			$page="Painel Administrativo";
+			include("views/header.php");
 			?>
+	<div id="login" class="form bradius">
+		<div class="message" style="<?php echo $display?>"><?php echo $msg;?></div>
+		<div class="logo"><a href="<?php echo $home;?>" title="<?php echo $title;?>"><img class="logoimg"
+			src="css/imagens/logo.png"alt="<?php echo $title;?>" title="<?php echo $title;?>"
+			width="150" height="100"/></a>
+		</div>
+		<div class="acomodar">
 			<!--cria a tabela que vai mostrar os usuários a serem aprovados ou bloqueados -->
 			<table width="100%" border="0">
 				<tr>
@@ -37,14 +36,12 @@ include("views/header.php");
 				</tr>
 				<?php }}?>
 			</table>
-<?php }else{?>
-				<p>Usuário comum</p>
-<?php			} ?>
-					
-				
 			<!--acomodar-->
 		</div>
 		<!--login-->
 	</div>
+<?php }else{include("views/homeusuario.php");?>
+				
+<?php			} ?>
 </body>
 </html>

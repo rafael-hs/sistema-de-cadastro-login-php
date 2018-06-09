@@ -14,8 +14,8 @@ a{
 	width:300px;
 	margin:0 auto;
 	position:relative;
-	top:250px;
-	border:1px solid #f1f1f1;
+	top:150px;
+	border:1px solid #001;
 	padding:10px;
 	background: #dbdbdb;
 }
@@ -107,10 +107,10 @@ form label{
 	margin-top:10px;
 	cursor:pointer;
 	font-family: 'IM Fell French Canon SC', serif;
-	color:rgb(143, 143, 143);
+	background:rgb(148, 150, 160);
 }
 .sb:hover{
-	background:rgb(5, 12, 17);
+	background:rgb(0, 0, 0);
 	color:#fff;
 }.message{
 	width:100%;
