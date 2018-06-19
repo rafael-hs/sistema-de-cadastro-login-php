@@ -123,6 +123,15 @@ form label{
 
 
 }
+.grafico{
+	position: relative;
+	font-family: 'IM Fell French Canon SC', serif;
+	width:800px;
+	height:600px;
+	align-content: center;
+	margin:auto;
+	top:10em;
+}
 /*Classes de herança*/
 .bradius{
 	border-radius:6px;
@@ -141,3 +150,4 @@ form label{
 	-webkit-transition:all 0.5s linear;
 	-moz-transition:all 0.5s linear;
 }
+

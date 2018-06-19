@@ -5,6 +5,7 @@ if($startaction==1 && $acao=="cadastrar")
        $endereco=$_POST["endereco"];
        $email=$_POST["email"];
        $senha=$_POST["senha"];
+       $csenha=$_POST["csenha"];
         //verificando se existe algum campo vazio
        if(empty($nome) || empty($endereco) || empty($email) || empty($senha))
        {    //mensagem de erro
@@ -21,14 +22,19 @@ if($startaction==1 && $acao=="cadastrar")
                 $msg="As senhas devem ter no mínimo oito caracteres!";
             }
             //senha válida
-            else
+            if($senha == $csenha)
             {
-            //executar a classe de cadastro
-                $connectar = new Cadastro;
-                echo "<div class=\"flash\">";
-                $connectar = $connectar->cadastrar($nome,$endereco,$email,$senha);
-                echo "</div>";
+                //executar a classe de cadastro
+                    $connectar = new Cadastro;
+                    echo "<div class=\"flash\">";
+                    $connectar = $connectar->cadastrar($nome,$endereco,$email,$senha);
+                    echo "</div>";
+                
+            }else
+            {
+                $msg="Verifique se as senhas são iguais";
             }
+            
           }
           //email invalido
           else

@@ -16,6 +16,7 @@ include("views/header.php");
             <label for="endereco">Endereço:</label><input type="text" class="txt bradius" id="endereco" name="endereco"/>
 			<label for="email">email:</label><input type="text" class="txt bradius" id="email" name="email" value=""/>
 			<label for="senha">Senha:</label><input type="password" class="txt bradius" id="senha" name="senha"/>
+			<label for="csenha">Confirmar senha:</label><input type="password" class="txt bradius" id="csenha" name="csenha"/>
 			<input type="submit" class="sb bradius" value="Cadastrar">
 		</form>
 		<!--acomodar-->

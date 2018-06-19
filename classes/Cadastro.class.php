@@ -7,12 +7,13 @@
             $nome = $nome;
             $endereco = $endereco;
             $senha = sha1($senha."senha");
+            $data = date('Y-m-d');
             //conferindo se existe um mesmo usuário cadastrado
             $validaremail=mysql_query("SELECT * FROM usuarios WHERE email='$email'");
             $contar=mysql_num_rows($validaremail);
             if($contar==0)
             {   //inserção no banco de dados
-                $insert=mysql_query("INSERT INTO usuarios(nome,endereco,email,senha,nivel,status)VALUES('$nome','$endereco','$email','$senha',1,0)");
+                $insert=mysql_query("INSERT INTO usuarios(nome,endereco,email,senha,nivel,status,data)VALUES('$nome','$endereco','$email','$senha',1,0,'$data')");
             }else
             {   //mensagem de erro ao inserir usuário(porque ele já existe)
                 $flash="Desculpe, mas já existe um usuário cadastrado com este e-mail em nosso sistema!";
