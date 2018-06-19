@@ -45,6 +45,14 @@ a{
 	left:0;
 	font-family: 'IM Fell French Canon SC', serif;
 
+}#relatoriodata
+{
+	width: 350px;
+	height: 250px;
+	margin: auto;
+	margin-top:15em;
+	background: #afafaf;
+	text-align: center;
 }
 #cadastrar{
 	border-bottom-left-radius: 8px;
@@ -65,6 +73,26 @@ a{
 	font-family: 'IM Fell French Canon SC', serif;
 
 }
+#relatorio{
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 15px;
+	-webkit-border-bottom-left-radius: 8px;
+	-webkit-border-bottom-right-radius: 15px;
+	-moz-border-radius-bottomleft: 8px;
+	-moz-border-radius-bottomright: 15px;
+	height:60px;
+	width:200px;
+	background: #979696;
+	text-align: center;
+	line-height: 40px;
+	position: absolute;
+	left:0;
+	top:0;
+	z-index: 2;
+	font-family: 'IM Fell French Canon SC', serif;
+
+}
+
 
 #cadastrar a{
 	padding-top:5px;
@@ -76,6 +104,19 @@ a{
 	color:#fff;
 }
 #cadastrar:hover{
+	background: #050505;
+	color:#fff;
+}
+#relatorio a{
+	padding-top:5px;
+	display:block;
+	font-family: 'IM Fell French Canon SC', serif;
+	color:rgb(0, 0, 0);
+}
+#relatorio:hover a{
+	color:#fff;
+}
+#relatorio:hover{
 	background: #050505;
 	color:#fff;
 }
@@ -145,7 +186,7 @@ form label{
 	float:right;
 }
 /*Múltiplos estilos */
-.txt,.txt:focus,.sb,.sb:hover,#cadastrar:hover,#cadastrar{
+.txt,.txt:focus,.sb,.sb:hover,#cadastrar:hover,#cadastrar,#relatorio:hover,#relatorio{
 	transition:all 0.5s linear;
 	-webkit-transition:all 0.5s linear;
 	-moz-transition:all 0.5s linear;

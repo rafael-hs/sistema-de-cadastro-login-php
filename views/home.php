@@ -1,12 +1,12 @@
-  <div id="cadastrar"><a href="index.php?acao=logout" title="Fazer logout">Logout &raquo;</a></div>
-	
 		<?php
 			if($nivel==2)
 			{
 			$page="Painel Administrativo";
 			include("views/header.php");
 			?>
-	<div id="login" class="form bradius">
+		<div id="cadastrar"><a href="index.php?acao=logout" title="Fazer logout">Logout &raquo;</a></div>
+		<div id="relatorio"><a href="views/gerarrelatorio.php" title="Gerar relatório">Relatório &raquo;</a></div>  
+		<div id="login" class="form bradius">
 		<div class="message" style="<?php echo $display?>"><?php echo $msg;?></div>
 		<div class="logo"><a href="<?php echo $home;?>" title="<?php echo $title;?>"><img class="logoimg"
 			src="css/imagens/logo.png"alt="<?php echo $title;?>" title="<?php echo $title;?>"
