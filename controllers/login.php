@@ -2,28 +2,22 @@
 if($startaction==1 && $acao=="logar")
 {
         //Dados
-        $email=addslashes($_POST['email']);
+        $usuario=addslashes($_POST['usuario']);
         $senha=addslashes(sha1($_POST['senha']."senha"));
         //verifica os campos estão cheios
-        if(empty($email) || empty($senha))
+        if(empty($usuario) || empty($senha))
         {   //mensagem de erro
             $msg="Preencha todos os campos";
         }else
-        {   //verifica se o email é válido
-            if(!filter_var($email,FILTER_VALIDATE_EMAIL))
-            {   //mensagem de erro
-                $msg="Digite seu e-mail corretamente!";
-            }
-            else
-            {   
+        {      
                 //Executa a busca pelo usuário
                 $login=new Login;
-                $emaild=$_SESSION['email'];
+                $usuariod=$_SESSION['usuario'];
                 $senhad=$_SESSION['senha'];
                 echo "<div class=\"flash\">";
-                $login=$login->logar($email,$senha);
+                $login=$login->logar($usuario,$senha);
                 echo "</div>";
-            }
+            
         }
 }
 ?>

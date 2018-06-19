@@ -12,7 +12,9 @@ include("views/header.php");
 		<div class="acomodar">
 		<!--formulário de cadastro-->
 		<form action="cadastro.php?acao=cadastrar" method="post">
-            <label for="nome">Nome:</label><input type="text" class="txt bradius" id="nome" name="nome"/>
+			<label for="nome">Nome:</label><input type="text" class="txt bradius" id="nome" name="nome"/>
+			<label for="usuario">Usuário:</label><input type="text" class="txt bradius" id="usuario" name="usuario"/>
+			<label for="idade">Idade:</label><input type="text" class="txt bradius" id="idade" name="idade"/>
             <label for="endereco">Endereço:</label><input type="text" class="txt bradius" id="endereco" name="endereco"/>
 			<label for="email">email:</label><input type="text" class="txt bradius" id="email" name="email" value=""/>
 			<label for="senha">Senha:</label><input type="password" class="txt bradius" id="senha" name="senha"/>

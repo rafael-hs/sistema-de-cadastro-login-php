@@ -1,22 +1,33 @@
 <?php 
     class Cadastro
     {
-        public function cadastrar($nome,$endereco,$email,$senha) 
+        public function cadastrar($nome,$usuario,$idade,$endereco,$email,$senha) 
         {
             //tratamento das variaveis
             $nome = $nome;
+            $usuario = $usuario;
+            $idade = $idade;
             $endereco = $endereco;
             $senha = sha1($senha."senha");
             $data = date('Y-m-d');
-            //conferindo se existe um mesmo usuário cadastrado
-            $validaremail=mysql_query("SELECT * FROM usuarios WHERE email='$email'");
-            $contar=mysql_num_rows($validaremail);
-            if($contar==0)
-            {   //inserção no banco de dados
-                $insert=mysql_query("INSERT INTO usuarios(nome,endereco,email,senha,nivel,status,data)VALUES('$nome','$endereco','$email','$senha',1,0,'$data')");
+            //conferindo se existe um mesmo email cadastrado
+            $validarusuario=mysql_query("SELECT * FROM usuarios WHERE usuario='$usuario'");
+            $contaru=mysql_num_rows($validarusuario);
+            if($contaru==0)
+            {
+                //conferindo se existe um mesmo email cadastrado
+                $validaremail=mysql_query("SELECT * FROM usuarios WHERE email='$email'");
+                $contar=mysql_num_rows($validaremail);
+                if($contar==0)
+                {   //inserção no banco de dados
+                    $insert=mysql_query("INSERT INTO usuarios(nome,usuario,idade,endereco,email,senha,nivel,status,data)VALUES('$nome','$usuario','$idade','$endereco','$email','$senha',1,0,'$data')");
+                }else
+                {   //mensagem de erro ao inserir usuário(porque ele já existe)
+                    $flash="Desculpe, mas já existe um usuário cadastrado com este e-mail em nosso sistema!";
+                }
             }else
             {   //mensagem de erro ao inserir usuário(porque ele já existe)
-                $flash="Desculpe, mas já existe um usuário cadastrado com este e-mail em nosso sistema!";
+                $flash="Desculpe, mas já existe o mesmo usuário em nosso sistema!";
             }
             //checa se $insert está definida
             if(isset($insert))

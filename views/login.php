@@ -9,7 +9,7 @@ include("views/header.php");
 			width="150" height="100"/></a></div>
 		<div class="acomodar">
 		<form name="login" method="post" action="index.php?acao=logar">
-			<label for="email">email:</label><input type="text" class="txt bradius" id="email" name="email" value=""/>
+			<label for="usuario">Usuário:</label><input type="text" class="txt bradius" id="usuario" name="usuario" value=""/>
 			<label for="senha">Senha:</label><input type="password" class="txt bradius" id="senha" name="senha" value=""/>
 			<input type="submit" class="sb bradius" value="Entrar">
 		</form>

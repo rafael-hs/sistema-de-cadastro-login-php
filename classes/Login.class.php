@@ -1,16 +1,16 @@
 <?php 
     class Login
     {
-        public function logar($email,$senha)
+        public function logar($usuario,$senha)
         {   //faz a busca no banco de dados se esse usuário ja existe
-            $buscar=mysql_query("SELECT * FROM usuarios WHERE email='$email' AND senha='$senha' LIMIT 1");
+            $buscar=mysql_query("SELECT * FROM usuarios WHERE usuario='$usuario' AND senha='$senha' LIMIT 1");
             //verifica se retornou algum usuário com o numero de linhas afetadas
             if(mysql_num_rows($buscar)==1)
             {   //faz um array do resultado da busca
                 $dados=mysql_fetch_array($buscar);
                 if($dados["status"]==1)
                 {   //atribui a variavel session os dados do usuário
-                    $_SESSION["email"]=$dados["email"];
+                    $_SESSION["usuario"]=$dados["usuario"];
                     $_SESSION['senha']=$dados['senha'];
                     $_SESSION['nivel']=$dados['nivel'];
                     setcookie("logado",1);
@@ -28,7 +28,7 @@
             {   //verifica se a variavel flash está vazia 
                 if(empty($flash))
                 {   //mensagem de erro
-                    $flash="Ops! Digite seu e-mail e sua senha corretamente";
+                    $flash="Ops! Digite seu USUÁRIO e sua senha corretamente";
                 }
                 
             }
