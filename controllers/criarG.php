@@ -1,21 +1,41 @@
 <?php
+
+include("../classes/DB.class.php");
+error_reporting (E_ALL & ~ E_NOTICE & ~ E_DEPRECATED);
+    $data1=$_POST['nomedata'];
+    $data2=$_POST['nomedata2'];
+    $data3=$_POST['nomedata3'];
+    $data4=$_POST['nomedata4'];
+    $data5=$_POST['nomedata5'];
+    $conectar= new DB;
+    $conectar=$conectar->conectar();
+    $buscard1=mysql_query("SELECT * FROM usuarios WHERE data LIKE '$data1'");
+    $ndata1=mysql_num_rows($buscard1);
+    $buscard2=mysql_query("SELECT * FROM usuarios WHERE data LIKE '$data2'");
+    $ndata2=mysql_num_rows($buscard2);
+    $buscard3=mysql_query("SELECT * FROM usuarios WHERE data='$data3'");
+    $ndata3=mysql_num_rows($buscard3);
+    $buscard4=mysql_query("SELECT * FROM usuarios WHERE data='$data4'");
+    $ndata4=mysql_num_rows($buscard4);
+    $buscard5=mysql_query("SELECT * FROM usuarios WHERE data='$data5'");
+    $ndata5=mysql_num_rows($buscard5);
+    
 //incluindo a library
 require_once("../includes/phplot/phplot.php");
 
 
 //define quais valores serão mostrados
 $dadosgraf = array(
-    array('janeiro 2018', 6.5),
-    array('fevereiro 2018', 9.5),
-    array('março', 9.5),
-    array('abril', 4.5),
-    array('maio', 6.5),
-    array('junho', 11.0),
-);
+    array($data1,$ndata1),
+    array($data2,$ndata2),
+    array($data3,$ndata3),
+    array($data4,$ndata4),
+    array($data5,$ndata5),
+    );
 //cria um novo objeto do tipo PHPlot com 500px de largura e 350px de altura
 $plot = new PHPlot(800,600);
 //organização do gráfico--------------------------------
-$plot->SetTitle('Usuários cadastrados na semana');
+$plot->SetTitle('Usuarios cadastrados na semana');
 //precosãp de uma casa decimal
 $plot->SetPrecisionY(1);
 //tipo de grafico
@@ -29,7 +49,7 @@ $plot->SetDataValues($dadosgraf);
 # Seta os traços (grid) do eixo X para invisível
 $plot->SetXTickPos('none');
 # Texto abaixo do eixo X
-$plot->SetXLabel("cadastro semanal");
+$plot->SetXLabel("Numero de cadastros por data");
 # Tamanho da fonte que varia de 1-5
 $plot->SetXLabelFontSize(2);
 $plot->SetAxisFontSize(2);
@@ -42,4 +62,5 @@ $plot->SetYDataLabelPos('plotin');
 // Desenha o Gráfico -----------------------------
 $plot->DrawGraph();
 // -----------------------------------------------
+
 ?>

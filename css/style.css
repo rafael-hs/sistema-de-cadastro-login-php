@@ -10,6 +10,12 @@ body{
 a{
 	text-decoration: none;
 }
+
+#escolhadatasb{
+	padding: 10%;
+	margin: 18%;
+	
+}
 #login{
 	width:300px;
 	margin:0 auto;
@@ -45,10 +51,25 @@ a{
 	left:0;
 	font-family: 'IM Fell French Canon SC', serif;
 
-}#relatoriodata
+}#sbgerarrelatorio{
+	margin-left: 25px;
+    margin-top: 0px;
+}
+#relatoriodata
 {
-	width: 350px;
-	height: 250px;
+	width: 400px;
+	height: 300px;
+	margin: auto;
+	margin-top:15em;
+	background: #afafaf;
+	text-align: center;
+}#grafico{
+	margin-left:28%;
+	margin-top:10%;
+}
+#nomedata{
+	width: 300px;
+	height: 400px;
 	margin: auto;
 	margin-top:15em;
 	background: #afafaf;
