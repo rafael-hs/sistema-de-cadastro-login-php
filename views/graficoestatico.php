@@ -1,37 +1,17 @@
 <?php
-include("../classes/DB.class.php");
-error_reporting (E_ALL & ~ E_NOTICE & ~ E_DEPRECATED);
-    $data1=$_POST['nomedata'];
-    $data2=$_POST['nomedata2'];
-    $data3=$_POST['nomedata3'];
-    $data4=$_POST['nomedata4'];
-    $data5=$_POST['nomedata5'];
-    $conectar= new DB;
-    $conectar=$conectar->conectar();
-    $buscard1=mysql_query("SELECT * FROM usuarios WHERE data LIKE '$data1'");
-    $ndata1=mysql_num_rows($buscard1);
-    $buscard2=mysql_query("SELECT * FROM usuarios WHERE data LIKE '$data2'");
-    $ndata2=mysql_num_rows($buscard2);
-    $buscard3=mysql_query("SELECT * FROM usuarios WHERE data='$data3'");
-    $ndata3=mysql_num_rows($buscard3);
-    $buscard4=mysql_query("SELECT * FROM usuarios WHERE data='$data4'");
-    $ndata4=mysql_num_rows($buscard4);
-    $buscard5=mysql_query("SELECT * FROM usuarios WHERE data='$data5'");
-    $ndata5=mysql_num_rows($buscard5);
-    
 //incluindo a library
 require_once("../includes/phplot/phplot.php");
 
 
 //define quais valores serão mostrados
 $dadosgraf = array(
-    array($data1,$ndata1),
-    array($data2,$ndata2),
-    array($data3,$ndata3),
-    array($data4,$ndata4),
-    array($data5,$ndata5),
+    array('20/06/2018',15),
+    array('20/06/2018',15),
+    array('20/06/2018',15),
+    array('20/06/2018',15),
+    array('20/06/2018',15),
     );
-//cria um novo objeto do tipo PHPlot com 500px de largura e 350px de altura
+//cria um novo objeto do tipo PHPlot com ""px de largura e ""   px de altura
 $plot = new PHPlot(800,600);
 //organização do gráfico--------------------------------
 $plot->SetTitle('Usuarios cadastrados na semana');
