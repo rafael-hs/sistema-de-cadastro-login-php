@@ -11,7 +11,7 @@
 <div id="relatorio"><a href="../index.php" title="Home">Home&raquo;</a></div>
 
 <div>
-    <form id=nomedata action="../views/escolhadata.php" method="post">
+    <form id=nomedata action="../controllers/criarG.php" method="post">
     <label for="nomedata">Data:</label><input type="text" class="txt bradius" name="nomedata"/>
     <label for="nomedata2">Data:</label><input type="text" class="txt bradius" name="nomedata2"/>
     <label for="nomedata3">Data:</label><input type="text" class="txt bradius" name="nomedata3"/>

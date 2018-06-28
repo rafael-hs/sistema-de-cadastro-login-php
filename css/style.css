@@ -10,11 +10,20 @@ body{
 a{
 	text-decoration: none;
 }
-
+#relatoriodata
+{
+	width: 400px;
+	height: 300px;
+	margin: auto;
+	margin-left:30em; 
+	margin-top:10em;
+	background: #afafaf;
+	text-align: center;
+}
 #escolhadatasb{
 	padding: 10%;
 	margin: 18%;
-	
+	../includes/phplot/phplot.php
 }
 #login{
 	width:300px;
@@ -55,15 +64,7 @@ a{
 	margin-left: 25px;
     margin-top: 0px;
 }
-#relatoriodata
-{
-	width: 400px;
-	height: 300px;
-	margin: auto;
-	margin-top:15em;
-	background: #afafaf;
-	text-align: center;
-}#grafico{
+#grafico{
 	margin-left:28%;
 	margin-top:10%;
 }
@@ -93,6 +94,29 @@ a{
 	z-index: 2;
 	font-family: 'IM Fell French Canon SC', serif;
 
+}#txt{
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 15px;
+	-webkit-border-bottom-left-radius: 8px;
+	-webkit-border-bottom-right-radius: 15px;
+	-moz-border-radius-bottomleft: 8px;
+	-moz-border-radius-bottomright: 15px;
+	height:60px;
+	width:200px;
+	background: #979696;
+	text-align: center;
+	line-height: 40px;
+	position: absolute;
+	left:15em;
+	top:0;
+	z-index: 2;
+	font-family: 'IM Fell French Canon SC', serif;
+}
+#txt a{
+	padding-top:5px;
+	display:block;
+	font-family: 'IM Fell French Canon SC', serif;
+	color:rgb(0, 0, 0);
 }
 #relatorio{
 	border-bottom-left-radius: 8px;
@@ -140,6 +164,26 @@ a{
 #relatorio:hover{
 	background: #050505;
 	color:#fff;
+}
+#txt:hover a{
+	color:#fff;
+}
+#txt:hover{
+	background: #050505;
+	color:#fff;
+}
+#conteudotxt{
+	width:100%;
+	height:60px;
+	background: #c00;
+	opacity:0.5;
+	text-align:center;
+	line-height:40px;
+	color:#fff;
+	position: absolute;
+	top:0;
+	left:0;
+	font-family: 'IM Fell French Canon SC', serif;
 }
 form label{
 	display:block;
@@ -207,7 +251,7 @@ form label{
 	float:right;
 }
 /*Múltiplos estilos */
-.txt,.txt:focus,.sb,.sb:hover,#cadastrar:hover,#cadastrar,#relatorio:hover,#relatorio{
+.txt,.txt:focus,.sb,.sb:hover,#cadastrar:hover,#cadastrar,#relatorio:hover,#relatorio,#txt{
 	transition:all 0.5s linear;
 	-webkit-transition:all 0.5s linear;
 	-moz-transition:all 0.5s linear;

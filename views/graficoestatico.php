@@ -5,11 +5,12 @@ require_once("../includes/phplot/phplot.php");
 
 //define quais valores serão mostrados
 $dadosgraf = array(
-    array('20/06/2018',15),
-    array('20/06/2018',15),
-    array('20/06/2018',15),
-    array('20/06/2018',15),
-    array('20/06/2018',15),
+    array('17/06/2018',2),
+    array('18/06/2018',3),
+    array('19/06/2018',2),
+    array('20/06/2018',2),
+    array('21/06/2018',1),
+    array('22/06/2018',2),
     );
 //cria um novo objeto do tipo PHPlot com ""px de largura e ""   px de altura
 $plot = new PHPlot(800,600);

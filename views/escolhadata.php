@@ -11,6 +11,7 @@ include("../includes/globais.php");
 </head>
 <body>
 <div id="relatorio"><a href="../index.php" title="Home">Home&raquo;</a></div>
+<div id="txt"><a href="../txt.php" title="Home">TXT&raquo;</a></div>
 <div id="relatoriodata">
         <img src="../views/graficoestatico.php">
 </div>

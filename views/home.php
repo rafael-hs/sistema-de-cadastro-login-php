@@ -5,7 +5,7 @@
 			include("views/header.php");
 			?>
 		<div id="cadastrar"><a href="index.php?acao=logout" title="Fazer logout">Logout &raquo;</a></div>
-		<div id="relatorio"><a href="views/gerarrelatorio.php" title="Gerar relatório">Relatório &raquo;</a></div>  
+		<div id="relatorio"><a href="views/escolhadata.php" title="Gerar relatório">Relatório &raquo;</a></div>  
 		<div id="login" class="form bradius">
 		<div class="message" style="<?php echo $display?>"><?php echo $msg;?></div>
 		<div class="logo"><a href="<?php echo $home;?>" title="<?php echo $title;?>"><img class="logoimg"

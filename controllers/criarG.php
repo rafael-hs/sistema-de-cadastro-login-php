@@ -21,9 +21,13 @@ error_reporting (E_ALL & ~ E_NOTICE & ~ E_DEPRECATED);
     
 //incluindo a library
 require_once("../includes/phplot/phplot.php");
-
-
+$plot = new PHPlot( 800,600);
+//organização do gráfico--------------------------------
+$plot->SetTitle('Usuarios cadastrados na semana');
 //define quais valores serão mostrados
+//precosãp de uma casa decimal
+$plot->SetPrecisionY(1);
+//tipo de grafico
 $dadosgraf = array(
     array($data1,$ndata1),
     array($data2,$ndata2),
@@ -32,12 +36,9 @@ $dadosgraf = array(
     array($data5,$ndata5),
     );
 //cria um novo objeto do tipo PHPlot com 500px de largura e 350px de altura
-$plot = new PHPlot(800,600);
-//organização do gráfico--------------------------------
-$plot->SetTitle('Usuarios cadastrados na semana');
-//precosãp de uma casa decimal
-$plot->SetPrecisionY(1);
-//tipo de grafico
+
+
+
 $plot->SetPlotType("bars");
 //tipo de preenchimento do grafico text(data) e quantidade(porcentagem)
 $plot->SetDataType("text-data");
@@ -61,5 +62,5 @@ $plot->SetYDataLabelPos('plotin');
 // Desenha o Gráfico -----------------------------
 $plot->DrawGraph();
 // -----------------------------------------------
-
+echo "<meta HTTP-EQUIV='Refresh' CONTENT='0;URL=http://localhost/sistemaphp/views/escolhadata.php>";
 ?>
